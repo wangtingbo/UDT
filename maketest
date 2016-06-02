@@ -1,0 +1,8 @@
+test:test.o thread.o
+	g++ -o test test.o thread.o -lpthread
+thread.o:thread.cpp 
+	g++ -c thread.cpp
+test.o:test.cpp
+	g++ -c test.cpp
+clean:
+	rm -f *.o
